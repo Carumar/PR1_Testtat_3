@@ -75,7 +75,10 @@ public class Vector {
 
         vectorProduct(vector1, vector2);
 
+        int[] vector3 = { 2, 5 };
+        int[] vector4 = { 4, 7 };
 
+        vectorProduct(vector3, vector4);
     }
 
 }
