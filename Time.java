@@ -1,2 +1,6 @@
 import java.ult.Scanner;
-Public class Time{}
+public class Time{
+		    public static void main(String[] args) {
+
+}
+}
