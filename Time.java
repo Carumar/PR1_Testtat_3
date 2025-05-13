@@ -24,6 +24,6 @@ public class Time{
 				formatRichtig =false;
 			}
 		}
-	return formatRichtig;
+		return formatRichtig;
 	}
 }
