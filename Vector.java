@@ -2,9 +2,9 @@
 public class Vector {
 
     public static void scalarMultiplication(int[] vector, int scalar) {
-        for (int i = 0; i < vector.length; i++) {
+        for (int position = 0; position < vector.length; position++) {
 
-            vector[i] *= scalar;
+            vector[position] *= scalar;
         }
     }
 
@@ -36,9 +36,9 @@ public class Vector {
     public static double vectorLength(int[] vector) {
         double qSumme = 0.0;
         double betrag = 0.0;
-        for (int i=0; i<vector.length;i++){
-            qSumme = qSumme + (vector[i]*vector[i]);
-            
+        for (int i = 0; i < vector.length; i++) {
+            qSumme = qSumme + (vector[i] * vector[i]);
+
         }
         betrag = Math.sqrt(qSumme);
 
@@ -48,15 +48,16 @@ public class Vector {
 
     public static int[][] matrixMultiplication(int[][] matrix, int scalar) {
         int[][] ausgabe = null;
-        boolean matrixFlag = false;
-        if (matrix.length ==3 && matrix[0].length == 3 && matrix[1].length == 3 && matrix[2].length == 3){
-            matrixFlag =true;    
-        }
-        if (matrixFlag) {
+        // boolean matrixFlag = false;
+        // if (matrix.length ==3 && matrix[0].length == 3 && matrix[1].length == 3 &&
+        // matrix[2].length == 3){
+        // matrixFlag =true;
+        // }
+        if (matrix.length == 3 && matrix[0].length == 3 && matrix[1].length == 3 && matrix[2].length == 3) {
             ausgabe = new int[3][3];
-            for (int i=0; i<matrix.length;i++){
-                for (int j=0; j<matrix[i].length;j++){
-                    ausgabe[i][j] = matrix[i][j] * scalar;
+            for (int außenPos = 0; außenPos < matrix.length; außenPos++) {
+                for (int innenPos = 0; innenPos < matrix[außenPos].length; innenPos++) {
+                    ausgabe[außenPos][innenPos] = matrix[außenPos][innenPos] * scalar;
                 }
             }
         }

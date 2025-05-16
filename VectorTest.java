@@ -6,11 +6,13 @@ public class VectorTest {
     @Test
     void testScalarMultiplication() {
         int[] vector = {1, 2, 3};
-        Vector.scalarMultiplication(vector, 2);
+        int scalar = 2;
+        Vector.scalarMultiplication(vector, scalar);
         assertArrayEquals(new int[]{2, 4, 6}, vector);
+        int[] vector1 = {7, 8, 15};
 
-        Vector.scalarMultiplication(vector, -1);
-        assertArrayEquals(new int[]{-2, -4, -6}, vector);
+        Vector.scalarMultiplication(vector1, -1);
+        assertArrayEquals(new int[]{-7, -8, -15}, vector1);
     }
 
     @Test
